@@ -12,11 +12,48 @@ Vision Glass:
   # --- Card-Mod Global Enhancements ---
   card-mod-theme: "Vision Glass"
   card-mod-root: |
-    app-header, .header {
-      background: var(--app-header-background-color, rgba(230, 240, 252, 0.85)) !important;
-      backdrop-filter: blur(25px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    app-header, .header, ha-top-app-bar-fixed {
+      background: var(--app-header-background-color, rgba(238, 246, 255, 0.85)) !important;
+      backdrop-filter: var(--app-header-backdrop-filter, blur(28px) saturate(190%)) !important;
+      -webkit-backdrop-filter: var(--app-header-backdrop-filter, blur(28px) saturate(190%)) !important;
       border-bottom: 1px solid var(--divider-color, rgba(255, 255, 255, 0.20)) !important;
+    }
+  card-mod-sidebar: |
+    :host {
+      background: var(--sidebar-background-color) !important;
+      backdrop-filter: var(--sidebar-backdrop-filter, blur(30px) saturate(190%)) !important;
+      -webkit-backdrop-filter: var(--sidebar-backdrop-filter, blur(30px) saturate(190%)) !important;
+      border-right: 1px solid var(--divider-color, rgba(255, 255, 255, 0.15)) !important;
+    }
+    .menu {
+      border-bottom: 1px solid var(--divider-color, rgba(255, 255, 255, 0.15)) !important;
+    }
+    paper-listbox {
+      background: transparent !important;
+    }
+    paper-icon-item {
+      border-radius: 14px !important;
+      margin: 3px 8px !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    paper-icon-item:hover {
+      background: rgba(255, 255, 255, 0.12) !important;
+    }
+    paper-icon-item.iron-selected {
+      background: rgba(2, 132, 199, 0.18) !important;
+      border: 1px solid rgba(2, 132, 199, 0.35) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+  card-mod-more-info: |
+    ha-dialog {
+      --mdc-dialog-box-shadow: 0 25px 60px rgba(0, 0, 0, 0.50) !important;
+      --ha-dialog-border-radius: 28px !important;
+    }
+    ha-dialog .content, ha-dialog-surface {
+      border-radius: 28px !important;
+      backdrop-filter: blur(35px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(35px) saturate(190%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.20) !important;
     }
   card-mod-card: |
     ha-card {
@@ -27,18 +64,18 @@ Vision Glass:
     }
     @media (prefers-color-scheme: light) {
       ha-card {
-        background: rgba(255, 255, 255, 0.58) !important;
-        border: 1px solid rgba(255, 255, 255, 0.85) !important;
+        background: rgba(255, 255, 255, 0.65) !important;
+        border: 1px solid rgba(255, 255, 255, 0.90) !important;
         box-shadow: 0 10px 30px rgba(31, 38, 135, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95) !important;
       }
       ha-card:hover {
-        box-shadow: 0 14px 40px rgba(31, 38, 135, 0.12), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
+        box-shadow: 0 14px 40px rgba(31, 38, 135, 0.14), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
       }
     }
     @media (prefers-color-scheme: dark) {
       ha-card {
-        background: rgba(24, 32, 48, 0.65) !important;
-        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        background: rgba(24, 32, 48, 0.70) !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
       }
       ha-card:hover {
@@ -50,7 +87,7 @@ Vision Glass:
   modes:
     light:
       # --- Backgrounds ---
-      lovelace-background: 'radial-gradient(circle at 20% 20%, rgba(255,255,255,0.7) 0%, transparent 40%), linear-gradient(135deg, #a8c8ea 0%, #cce0f5 35%, #e8f1fc 65%, #bcd6f2 100%) fixed'
+      lovelace-background: 'radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.95) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(186, 230, 253, 0.65) 0%, transparent 50%), linear-gradient(135deg, #cbe3f7 0%, #dbeafe 30%, #eef5ff 65%, #cde2f8 100%) fixed'
       primary-background-color: '#d0e1f3'
       secondary-background-color: 'rgba(255, 255, 255, 0.50)'
       card-background-color: 'rgba(255, 255, 255, 0.65)'
@@ -60,7 +97,7 @@ Vision Glass:
       ha-card-backdrop-filter: 'blur(25px) saturate(180%)'
       ha-card-border-radius: '22px'
       ha-card-border-width: '1px'
-      ha-card-border-color: 'rgba(255, 255, 255, 0.85)'
+      ha-card-border-color: 'rgba(255, 255, 255, 0.90)'
       ha-card-box-shadow: '0 10px 30px rgba(31, 38, 135, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95)'
 
       # --- Typography ---
@@ -68,7 +105,7 @@ Vision Glass:
       secondary-text-color: '#475569'
       text-primary-color: '#0f172a'
       disabled-text-color: 'rgba(15, 23, 42, 0.38)'
-      divider-color: 'rgba(255, 255, 255, 0.60)'
+      divider-color: 'rgba(203, 213, 225, 0.60)'
 
       # --- Accents & States ---
       primary-color: '#0284c7'
@@ -124,13 +161,13 @@ Vision Glass:
       paper-slider-pin-color: '#0284c7'
 
       # --- Header & Navigation (Frosted Glass with Blur) ---
-      app-header-background-color: 'rgba(230, 240, 252, 0.85)'
-      app-header-backdrop-filter: 'blur(25px) saturate(180%)'
+      app-header-background-color: 'rgba(238, 246, 255, 0.85)'
+      app-header-backdrop-filter: 'blur(28px) saturate(190%)'
       app-header-text-color: '#0f172a'
       app-header-selection-bar-color: '#0284c7'
-      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.7)'
-      sidebar-background-color: 'rgba(255, 255, 255, 0.65)'
-      sidebar-backdrop-filter: 'blur(25px)'
+      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.85)'
+      sidebar-background-color: 'rgba(238, 246, 255, 0.85)'
+      sidebar-backdrop-filter: 'blur(30px) saturate(190%)'
       sidebar-text-color: '#0f172a'
       sidebar-selected-text-color: '#0284c7'
       sidebar-selected-icon-color: '#0284c7'
@@ -156,7 +193,7 @@ Vision Glass:
       ha-card-backdrop-filter: 'blur(25px) saturate(160%)'
       ha-card-border-radius: '22px'
       ha-card-border-width: '1px'
-      ha-card-border-color: 'rgba(255, 255, 255, 0.12)'
+      ha-card-border-color: 'rgba(255, 255, 255, 0.14)'
       ha-card-box-shadow: '0 10px 35px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)'
 
       # --- Typography ---
@@ -164,7 +201,7 @@ Vision Glass:
       secondary-text-color: '#94a3b8'
       text-primary-color: '#f8fafc'
       disabled-text-color: 'rgba(248, 250, 252, 0.38)'
-      divider-color: 'rgba(255, 255, 255, 0.10)'
+      divider-color: 'rgba(255, 255, 255, 0.12)'
 
       # --- Accents & States ---
       primary-color: '#38bdf8'
@@ -220,13 +257,13 @@ Vision Glass:
       paper-slider-pin-color: '#38bdf8'
 
       # --- Header & Navigation (Frosted Glass with Blur) ---
-      app-header-background-color: 'rgba(12, 16, 24, 0.85)'
-      app-header-backdrop-filter: 'blur(25px) saturate(180%)'
+      app-header-background-color: 'rgba(15, 23, 42, 0.80)'
+      app-header-backdrop-filter: 'blur(28px) saturate(180%)'
       app-header-text-color: '#f8fafc'
       app-header-selection-bar-color: '#38bdf8'
-      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.1)'
-      sidebar-background-color: 'rgba(18, 24, 38, 0.75)'
-      sidebar-backdrop-filter: 'blur(25px)'
+      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.12)'
+      sidebar-background-color: 'rgba(15, 23, 42, 0.80)'
+      sidebar-backdrop-filter: 'blur(30px) saturate(190%)'
       sidebar-text-color: '#f8fafc'
       sidebar-selected-text-color: '#38bdf8'
       sidebar-selected-icon-color: '#38bdf8'
@@ -248,28 +285,65 @@ Vision Glass Light:
   # --- Card-Mod Global Enhancements ---
   card-mod-theme: "Vision Glass Light"
   card-mod-root: |
-    app-header, .header {
-      background: rgba(230, 240, 252, 0.85) !important;
-      backdrop-filter: blur(25px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.70) !important;
+    app-header, .header, ha-top-app-bar-fixed {
+      background: rgba(238, 246, 255, 0.85) !important;
+      backdrop-filter: blur(28px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.85) !important;
+    }
+  card-mod-sidebar: |
+    :host {
+      background: rgba(238, 246, 255, 0.85) !important;
+      backdrop-filter: blur(30px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(30px) saturate(190%) !important;
+      border-right: 1px solid rgba(203, 213, 225, 0.60) !important;
+    }
+    .menu {
+      border-bottom: 1px solid rgba(203, 213, 225, 0.60) !important;
+    }
+    paper-listbox {
+      background: transparent !important;
+    }
+    paper-icon-item {
+      border-radius: 14px !important;
+      margin: 3px 8px !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    paper-icon-item:hover {
+      background: rgba(255, 255, 255, 0.40) !important;
+    }
+    paper-icon-item.iron-selected {
+      background: rgba(2, 132, 199, 0.18) !important;
+      border: 1px solid rgba(2, 132, 199, 0.35) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+  card-mod-more-info: |
+    ha-dialog {
+      --mdc-dialog-box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18) !important;
+      --ha-dialog-border-radius: 28px !important;
+    }
+    ha-dialog .content, ha-dialog-surface {
+      border-radius: 28px !important;
+      backdrop-filter: blur(35px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(35px) saturate(190%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.85) !important;
     }
   card-mod-card: |
     ha-card {
       border-radius: 22px !important;
       backdrop-filter: blur(25px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-      background: rgba(255, 255, 255, 0.58) !important;
-      border: 1px solid rgba(255, 255, 255, 0.85) !important;
+      background: rgba(255, 255, 255, 0.65) !important;
+      border: 1px solid rgba(255, 255, 255, 0.90) !important;
       box-shadow: 0 10px 30px rgba(31, 38, 135, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95) !important;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     ha-card:hover {
-      box-shadow: 0 14px 40px rgba(31, 38, 135, 0.12), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
+      box-shadow: 0 14px 40px rgba(31, 38, 135, 0.14), inset 0 1px 1px rgba(255, 255, 255, 1) !important;
     }
 
   # --- Backgrounds ---
-  lovelace-background: 'radial-gradient(circle at 20% 20%, rgba(255,255,255,0.7) 0%, transparent 40%), linear-gradient(135deg, #a8c8ea 0%, #cce0f5 35%, #e8f1fc 65%, #bcd6f2 100%) fixed'
+  lovelace-background: 'radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.95) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(186, 230, 253, 0.65) 0%, transparent 50%), linear-gradient(135deg, #cbe3f7 0%, #dbeafe 30%, #eef5ff 65%, #cde2f8 100%) fixed'
   primary-background-color: '#d0e1f3'
   secondary-background-color: 'rgba(255, 255, 255, 0.50)'
   card-background-color: 'rgba(255, 255, 255, 0.65)'
@@ -279,7 +353,7 @@ Vision Glass Light:
   ha-card-backdrop-filter: 'blur(25px) saturate(180%)'
   ha-card-border-radius: '22px'
   ha-card-border-width: '1px'
-  ha-card-border-color: 'rgba(255, 255, 255, 0.85)'
+  ha-card-border-color: 'rgba(255, 255, 255, 0.90)'
   ha-card-box-shadow: '0 10px 30px rgba(31, 38, 135, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.95)'
 
   # --- Typography ---
@@ -287,7 +361,7 @@ Vision Glass Light:
   secondary-text-color: '#475569'
   text-primary-color: '#0f172a'
   disabled-text-color: 'rgba(15, 23, 42, 0.38)'
-  divider-color: 'rgba(255, 255, 255, 0.60)'
+  divider-color: 'rgba(203, 213, 225, 0.60)'
 
   # --- Accents & States ---
   primary-color: '#0284c7'
@@ -343,13 +417,13 @@ Vision Glass Light:
   paper-slider-pin-color: '#0284c7'
 
   # --- Header & Navigation (Frosted Glass with Blur) ---
-  app-header-background-color: 'rgba(230, 240, 252, 0.85)'
-  app-header-backdrop-filter: 'blur(25px) saturate(180%)'
+  app-header-background-color: 'rgba(238, 246, 255, 0.85)'
+  app-header-backdrop-filter: 'blur(28px) saturate(190%)'
   app-header-text-color: '#0f172a'
   app-header-selection-bar-color: '#0284c7'
-  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.7)'
-  sidebar-background-color: 'rgba(255, 255, 255, 0.65)'
-  sidebar-backdrop-filter: 'blur(25px)'
+  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.85)'
+  sidebar-background-color: 'rgba(238, 246, 255, 0.85)'
+  sidebar-backdrop-filter: 'blur(30px) saturate(190%)'
   sidebar-text-color: '#0f172a'
   sidebar-selected-text-color: '#0284c7'
   sidebar-selected-icon-color: '#0284c7'
@@ -371,19 +445,56 @@ Vision Glass Dark:
   # --- Card-Mod Global Enhancements ---
   card-mod-theme: "Vision Glass Dark"
   card-mod-root: |
-    app-header, .header {
-      background: rgba(12, 16, 24, 0.85) !important;
-      backdrop-filter: blur(25px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+    app-header, .header, ha-top-app-bar-fixed {
+      background: rgba(15, 23, 42, 0.80) !important;
+      backdrop-filter: blur(28px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+  card-mod-sidebar: |
+    :host {
+      background: rgba(15, 23, 42, 0.80) !important;
+      backdrop-filter: blur(30px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(30px) saturate(190%) !important;
+      border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+    .menu {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+    paper-listbox {
+      background: transparent !important;
+    }
+    paper-icon-item {
+      border-radius: 14px !important;
+      margin: 3px 8px !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    paper-icon-item:hover {
+      background: rgba(255, 255, 255, 0.08) !important;
+    }
+    paper-icon-item.iron-selected {
+      background: rgba(56, 189, 248, 0.18) !important;
+      border: 1px solid rgba(56, 189, 248, 0.35) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+  card-mod-more-info: |
+    ha-dialog {
+      --mdc-dialog-box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65) !important;
+      --ha-dialog-border-radius: 28px !important;
+    }
+    ha-dialog .content, ha-dialog-surface {
+      border-radius: 28px !important;
+      backdrop-filter: blur(35px) saturate(190%) !important;
+      -webkit-backdrop-filter: blur(35px) saturate(190%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
   card-mod-card: |
     ha-card {
       border-radius: 22px !important;
       backdrop-filter: blur(25px) saturate(160%) !important;
       -webkit-backdrop-filter: blur(25px) saturate(160%) !important;
-      background: rgba(24, 32, 48, 0.65) !important;
-      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      background: rgba(24, 32, 48, 0.70) !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
@@ -403,7 +514,7 @@ Vision Glass Dark:
   ha-card-backdrop-filter: 'blur(25px) saturate(160%)'
   ha-card-border-radius: '22px'
   ha-card-border-width: '1px'
-  ha-card-border-color: 'rgba(255, 255, 255, 0.12)'
+  ha-card-border-color: 'rgba(255, 255, 255, 0.14)'
   ha-card-box-shadow: '0 10px 35px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)'
 
   # --- Typography ---
@@ -411,7 +522,7 @@ Vision Glass Dark:
   secondary-text-color: '#94a3b8'
   text-primary-color: '#f8fafc'
   disabled-text-color: 'rgba(248, 250, 252, 0.38)'
-  divider-color: 'rgba(255, 255, 255, 0.10)'
+  divider-color: 'rgba(255, 255, 255, 0.12)'
 
   # --- Accents & States ---
   primary-color: '#38bdf8'
@@ -467,13 +578,13 @@ Vision Glass Dark:
   paper-slider-pin-color: '#38bdf8'
 
   # --- Header & Navigation (Frosted Glass with Blur) ---
-  app-header-background-color: 'rgba(12, 16, 24, 0.85)'
-  app-header-backdrop-filter: 'blur(25px) saturate(180%)'
+  app-header-background-color: 'rgba(15, 23, 42, 0.80)'
+  app-header-backdrop-filter: 'blur(28px) saturate(180%)'
   app-header-text-color: '#f8fafc'
   app-header-selection-bar-color: '#38bdf8'
-  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.1)'
-  sidebar-background-color: 'rgba(18, 24, 38, 0.75)'
-  sidebar-backdrop-filter: 'blur(25px)'
+  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.12)'
+  sidebar-background-color: 'rgba(15, 23, 42, 0.80)'
+  sidebar-backdrop-filter: 'blur(30px) saturate(190%)'
   sidebar-text-color: '#f8fafc'
   sidebar-selected-text-color: '#38bdf8'
   sidebar-selected-icon-color: '#38bdf8'
