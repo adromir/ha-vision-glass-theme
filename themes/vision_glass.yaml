@@ -13,7 +13,8 @@ Vision Glass:
   card-mod-theme: "Vision Glass"
   card-mod-root: |
     app-header, .header {
-      background: transparent !important;
+      backdrop-filter: blur(25px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
     }
   card-mod-card: |
     ha-card {
@@ -120,12 +121,13 @@ Vision Glass:
       paper-slider-knob-start-color: '#ffffff'
       paper-slider-pin-color: '#0284c7'
 
-      # --- Header & Navigation ---
-      app-header-background-color: 'transparent'
+      # --- Header & Navigation (Frosted Glass with Blur) ---
+      app-header-background-color: 'rgba(230, 240, 252, 0.85)'
+      app-header-backdrop-filter: 'blur(25px) saturate(180%)'
       app-header-text-color: '#0f172a'
       app-header-selection-bar-color: '#0284c7'
-      app-header-border-bottom: 'none'
-      sidebar-background-color: 'rgba(255, 255, 255, 0.50)'
+      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.7)'
+      sidebar-background-color: 'rgba(255, 255, 255, 0.65)'
       sidebar-backdrop-filter: 'blur(25px)'
       sidebar-text-color: '#0f172a'
       sidebar-selected-text-color: '#0284c7'
@@ -215,12 +217,13 @@ Vision Glass:
       paper-slider-knob-start-color: '#ffffff'
       paper-slider-pin-color: '#38bdf8'
 
-      # --- Header & Navigation ---
-      app-header-background-color: 'transparent'
+      # --- Header & Navigation (Frosted Glass with Blur) ---
+      app-header-background-color: 'rgba(12, 16, 24, 0.85)'
+      app-header-backdrop-filter: 'blur(25px) saturate(180%)'
       app-header-text-color: '#f8fafc'
       app-header-selection-bar-color: '#38bdf8'
-      app-header-border-bottom: 'none'
-      sidebar-background-color: 'rgba(18, 24, 38, 0.65)'
+      app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.1)'
+      sidebar-background-color: 'rgba(18, 24, 38, 0.75)'
       sidebar-backdrop-filter: 'blur(25px)'
       sidebar-text-color: '#f8fafc'
       sidebar-selected-text-color: '#38bdf8'
@@ -244,7 +247,8 @@ Vision Glass Light:
   card-mod-theme: "Vision Glass Light"
   card-mod-root: |
     app-header, .header {
-      background: transparent !important;
+      backdrop-filter: blur(25px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
     }
   card-mod-card: |
     ha-card {
@@ -334,12 +338,13 @@ Vision Glass Light:
   paper-slider-knob-start-color: '#ffffff'
   paper-slider-pin-color: '#0284c7'
 
-  # --- Header & Navigation ---
-  app-header-background-color: 'transparent'
+  # --- Header & Navigation (Frosted Glass with Blur) ---
+  app-header-background-color: 'rgba(230, 240, 252, 0.85)'
+  app-header-backdrop-filter: 'blur(25px) saturate(180%)'
   app-header-text-color: '#0f172a'
   app-header-selection-bar-color: '#0284c7'
-  app-header-border-bottom: 'none'
-  sidebar-background-color: 'rgba(255, 255, 255, 0.50)'
+  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.7)'
+  sidebar-background-color: 'rgba(255, 255, 255, 0.65)'
   sidebar-backdrop-filter: 'blur(25px)'
   sidebar-text-color: '#0f172a'
   sidebar-selected-text-color: '#0284c7'
@@ -363,7 +368,8 @@ Vision Glass Dark:
   card-mod-theme: "Vision Glass Dark"
   card-mod-root: |
     app-header, .header {
-      background: transparent !important;
+      backdrop-filter: blur(25px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
     }
   card-mod-card: |
     ha-card {
@@ -454,12 +460,13 @@ Vision Glass Dark:
   paper-slider-knob-start-color: '#ffffff'
   paper-slider-pin-color: '#38bdf8'
 
-  # --- Header & Navigation ---
-  app-header-background-color: 'transparent'
+  # --- Header & Navigation (Frosted Glass with Blur) ---
+  app-header-background-color: 'rgba(12, 16, 24, 0.85)'
+  app-header-backdrop-filter: 'blur(25px) saturate(180%)'
   app-header-text-color: '#f8fafc'
   app-header-selection-bar-color: '#38bdf8'
-  app-header-border-bottom: 'none'
-  sidebar-background-color: 'rgba(18, 24, 38, 0.65)'
+  app-header-border-bottom: '1px solid rgba(255, 255, 255, 0.1)'
+  sidebar-background-color: 'rgba(18, 24, 38, 0.75)'
   sidebar-backdrop-filter: 'blur(25px)'
   sidebar-text-color: '#f8fafc'
   sidebar-selected-text-color: '#38bdf8'
