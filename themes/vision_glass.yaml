@@ -13,8 +13,10 @@ Vision Glass:
   card-mod-theme: "Vision Glass"
   card-mod-root: |
     app-header, .header {
+      background: var(--app-header-background-color, rgba(12, 16, 24, 0.90)) !important;
       backdrop-filter: blur(25px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+      border-bottom: 1px solid var(--divider-color, rgba(255, 255, 255, 0.15)) !important;
     }
   card-mod-card: |
     ha-card {
@@ -247,8 +249,10 @@ Vision Glass Light:
   card-mod-theme: "Vision Glass Light"
   card-mod-root: |
     app-header, .header {
+      background: var(--app-header-background-color, rgba(12, 16, 24, 0.90)) !important;
       backdrop-filter: blur(25px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+      border-bottom: 1px solid var(--divider-color, rgba(255, 255, 255, 0.15)) !important;
     }
   card-mod-card: |
     ha-card {
@@ -368,8 +372,10 @@ Vision Glass Dark:
   card-mod-theme: "Vision Glass Dark"
   card-mod-root: |
     app-header, .header {
+      background: var(--app-header-background-color, rgba(12, 16, 24, 0.90)) !important;
       backdrop-filter: blur(25px) saturate(180%) !important;
       -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+      border-bottom: 1px solid var(--divider-color, rgba(255, 255, 255, 0.15)) !important;
     }
   card-mod-card: |
     ha-card {
