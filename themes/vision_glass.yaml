@@ -1,0 +1,168 @@
+# Vision Glass Theme for Home Assistant
+# Inspired by Apple VisionOS & macOS Glassmorphism design
+# Author: Adromir (https://github.com/adromir)
+# Repository: https://github.com/adromir/ha-vision-glass-theme
+
+Vision Glass:
+  modes:
+    light:
+      # Backgrounds
+      lovelace-background: 'center / cover no-repeat fixed radial-gradient(circle at 50% 15%, #dbe7f6 0%, #bcd2eb 45%, #9ebbdc 100%)'
+      primary-background-color: '#d6e4f4'
+      secondary-background-color: 'rgba(255, 255, 255, 0.45)'
+      card-background-color: 'rgba(255, 255, 255, 0.55)'
+
+      # Card Glassmorphism
+      ha-card-background: 'rgba(255, 255, 255, 0.55)'
+      ha-card-backdrop-filter: 'blur(24px) saturate(180%)'
+      ha-card-border-radius: '24px'
+      ha-card-border-width: '1px'
+      ha-card-border-color: 'rgba(255, 255, 255, 0.75)'
+      ha-card-box-shadow: '0 8px 32px 0 rgba(31, 38, 135, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95)'
+
+      # Typography
+      primary-text-color: '#1c2438'
+      secondary-text-color: '#52637a'
+      text-primary-color: '#1c2438'
+      disabled-text-color: 'rgba(28, 36, 56, 0.38)'
+      divider-color: 'rgba(255, 255, 255, 0.45)'
+
+      # Accent Colors
+      primary-color: '#2563eb'
+      accent-color: '#f59e0b'
+      state-icon-color: '#52637a'
+      state-icon-active-color: '#2563eb'
+      state-active-color: '#2563eb'
+      state-inactive-color: '#94a3b8'
+
+      # Header & Navigation
+      app-header-background-color: 'transparent'
+      app-header-text-color: '#1c2438'
+      app-header-selection-bar-color: '#2563eb'
+      app-header-border-bottom: 'none'
+
+      # Sidebar
+      sidebar-background-color: 'rgba(255, 255, 255, 0.45)'
+      sidebar-backdrop-filter: 'blur(24px)'
+      sidebar-text-color: '#1c2438'
+      sidebar-selected-text-color: '#2563eb'
+      sidebar-selected-icon-color: '#2563eb'
+      sidebar-icon-color: '#52637a'
+      sidebar-border-color: 'rgba(255, 255, 255, 0.5)'
+
+      # Dialogs / Popups / Modals
+      dialog-backdrop-filter: 'blur(20px)'
+      ha-dialog-surface-backdrop-filter: 'blur(30px) saturate(190%)'
+      mdc-dialog-box-shadow: '0 20px 50px rgba(15, 23, 42, 0.15)'
+      ha-dialog-border-radius: '28px'
+      ha-dialog-border-width: '1px'
+      ha-dialog-border-color: 'rgba(255, 255, 255, 0.8)'
+
+      # MDC Theme Variables
+      mdc-theme-primary: '#2563eb'
+      mdc-theme-secondary: '#f59e0b'
+      mdc-theme-background: '#d6e4f4'
+      mdc-theme-surface: 'rgba(255, 255, 255, 0.65)'
+      mdc-theme-on-primary: '#ffffff'
+      mdc-theme-on-secondary: '#ffffff'
+      mdc-theme-on-surface: '#1c2438'
+      mdc-theme-text-primary-on-background: '#1c2438'
+      mdc-theme-text-secondary-on-background: '#52637a'
+
+      # Switches, Sliders & Controls
+      switch-checked-button-color: '#2563eb'
+      switch-checked-track-color: 'rgba(37, 99, 235, 0.4)'
+      switch-unchecked-button-color: '#ffffff'
+      switch-unchecked-track-color: 'rgba(0, 0, 0, 0.15)'
+      slider-color: '#2563eb'
+      slider-bar-color: 'rgba(0, 0, 0, 0.08)'
+      slider-secondary-color: '#93c5fd'
+
+      # Chips
+      chip-background: 'rgba(255, 255, 255, 0.55)'
+      chip-background-color: 'rgba(255, 255, 255, 0.55)'
+      chip-border-radius: '9999px'
+      chip-border-width: '1px'
+      chip-border-color: 'rgba(255, 255, 255, 0.75)'
+      chip-box-shadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
+
+    dark:
+      # Backgrounds
+      lovelace-background: 'center / cover no-repeat fixed radial-gradient(circle at 50% 15%, #1d2538 0%, #121826 50%, #0a0e17 100%)'
+      primary-background-color: '#0e131d'
+      secondary-background-color: 'rgba(22, 29, 44, 0.65)'
+      card-background-color: 'rgba(25, 33, 49, 0.68)'
+
+      # Card Glassmorphism
+      ha-card-background: 'rgba(25, 33, 49, 0.68)'
+      ha-card-backdrop-filter: 'blur(24px) saturate(180%)'
+      ha-card-border-radius: '24px'
+      ha-card-border-width: '1px'
+      ha-card-border-color: 'rgba(255, 255, 255, 0.10)'
+      ha-card-box-shadow: '0 10px 35px 0 rgba(0, 0, 0, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.12)'
+
+      # Typography
+      primary-text-color: '#f8fafc'
+      secondary-text-color: '#94a3b8'
+      text-primary-color: '#f8fafc'
+      disabled-text-color: 'rgba(248, 250, 252, 0.38)'
+      divider-color: 'rgba(255, 255, 255, 0.08)'
+
+      # Accent Colors
+      primary-color: '#38bdf8'
+      accent-color: '#fbbf24'
+      state-icon-color: '#94a3b8'
+      state-icon-active-color: '#38bdf8'
+      state-active-color: '#38bdf8'
+      state-inactive-color: '#64748b'
+
+      # Header & Navigation
+      app-header-background-color: 'transparent'
+      app-header-text-color: '#f8fafc'
+      app-header-selection-bar-color: '#38bdf8'
+      app-header-border-bottom: 'none'
+
+      # Sidebar
+      sidebar-background-color: 'rgba(18, 24, 38, 0.65)'
+      sidebar-backdrop-filter: 'blur(24px)'
+      sidebar-text-color: '#f8fafc'
+      sidebar-selected-text-color: '#38bdf8'
+      sidebar-selected-icon-color: '#38bdf8'
+      sidebar-icon-color: '#94a3b8'
+      sidebar-border-color: 'rgba(255, 255, 255, 0.08)'
+
+      # Dialogs / Popups / Modals
+      dialog-backdrop-filter: 'blur(20px)'
+      ha-dialog-surface-backdrop-filter: 'blur(30px) saturate(190%)'
+      mdc-dialog-box-shadow: '0 20px 50px rgba(0, 0, 0, 0.65)'
+      ha-dialog-border-radius: '28px'
+      ha-dialog-border-width: '1px'
+      ha-dialog-border-color: 'rgba(255, 255, 255, 0.12)'
+
+      # MDC Theme Variables
+      mdc-theme-primary: '#38bdf8'
+      mdc-theme-secondary: '#fbbf24'
+      mdc-theme-background: '#0e131d'
+      mdc-theme-surface: 'rgba(24, 32, 48, 0.78)'
+      mdc-theme-on-primary: '#0f172a'
+      mdc-theme-on-secondary: '#0f172a'
+      mdc-theme-on-surface: '#f8fafc'
+      mdc-theme-text-primary-on-background: '#f8fafc'
+      mdc-theme-text-secondary-on-background: '#94a3b8'
+
+      # Switches, Sliders & Controls
+      switch-checked-button-color: '#38bdf8'
+      switch-checked-track-color: 'rgba(56, 189, 248, 0.4)'
+      switch-unchecked-button-color: '#94a3b8'
+      switch-unchecked-track-color: 'rgba(255, 255, 255, 0.15)'
+      slider-color: '#38bdf8'
+      slider-bar-color: 'rgba(255, 255, 255, 0.10)'
+      slider-secondary-color: '#0284c7'
+
+      # Chips
+      chip-background: 'rgba(255, 255, 255, 0.08)'
+      chip-background-color: 'rgba(255, 255, 255, 0.08)'
+      chip-border-radius: '9999px'
+      chip-border-width: '1px'
+      chip-border-color: 'rgba(255, 255, 255, 0.12)'
+      chip-box-shadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
