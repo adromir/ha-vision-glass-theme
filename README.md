@@ -1,5 +1,6 @@
 # 🪟 Vision Glass Theme for Home Assistant
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=adromir&repository=ha-vision-glass-theme&category=theme)
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg?style=for-the-badge)](https://github.com/hacs/default)
 [![GitHub Release](https://img.shields.io/github/v/release/adromir/ha-vision-glass-theme?style=for-the-badge&color=blue)](https://github.com/adromir/ha-vision-glass-theme/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
@@ -36,6 +37,8 @@ An ultra-modern, elegant translucent **Glassmorphism Theme** for Home Assistant,
 ## 📦 Installation
 
 ### Method 1: HACS (Recommended)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=adromir&repository=ha-vision-glass-theme&category=theme)
 
 1. Ensure [HACS](https://hacs.xyz/) is installed in your Home Assistant instance.
 2. In Home Assistant, open **HACS** > **Themes** (or **Frontend**).
