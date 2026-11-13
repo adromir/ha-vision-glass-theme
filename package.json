@@ -1,0 +1,27 @@
+{
+  "name": "ha-vision-glass-theme",
+  "version": "1.1.0",
+  "type": "module",
+  "description": "Ultra-modern translucent Glassmorphism theme for Home Assistant inspired by VisionOS and macOS with dynamic light & dark mode",
+  "scripts": {
+    "test": "python -c \"import yaml; yaml.safe_load(open('themes/vision_glass.yaml', 'r', encoding='utf-8')); print('YAML valid')\"",
+    "release": "node scripts/release.js"
+  },
+  "keywords": [
+    "home-assistant",
+    "theme",
+    "glassmorphism",
+    "visionos",
+    "hacs"
+  ],
+  "author": "Adromir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adromir/ha-vision-glass-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adromir/ha-vision-glass-theme/issues"
+  },
+  "homepage": "https://github.com/adromir/ha-vision-glass-theme#readme"
+}

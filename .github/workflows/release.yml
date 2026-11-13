@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name to release (e.g. v1.1.1)'
+        required: false
+
+jobs:
+  release:
+    name: Validate Theme & Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate Theme & HACS metadata
+        run: |
+          if [ ! -f "themes/vision_glass.yaml" ]; then
+            echo "Error: themes/vision_glass.yaml not found!"
+            exit 1
+          fi
+          if [ ! -f "hacs.json" ]; then
+            echo "Error: hacs.json not found!"
+            exit 1
+          fi
+          python -m pip install pyyaml
+          python -c "import yaml; yaml.safe_load(open('themes/vision_glass.yaml', 'r', encoding='utf-8')); print('YAML valid')"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag_name || github.ref_name }}
+          name: Vision Glass Theme ${{ github.event.inputs.tag_name || github.ref_name }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
