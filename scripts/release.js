@@ -43,6 +43,7 @@ console.log(`Creating GitHub Release ${version} for ${pkg.name}...`);
 
 const payload = JSON.stringify({
   tag_name: version,
+  target_commitish: 'main',
   name: `Vision Glass Theme ${version}`,
   body: releaseBody,
   draft: false,
